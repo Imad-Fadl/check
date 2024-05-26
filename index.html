@@ -1,0 +1,84 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>COFFEE-ECOMMERCE</title>
+</head>
+<body>
+    <video src="./coffee.mp4" autoplay muted loop></video>
+    <div class="container">
+        <form id="checkoutForm">
+            <div class="row">
+                <div class="col">
+                    <h3 class="title">billing address</h3>
+                    <div class="inputBox">
+                        <span>full name :</span>
+                        <input type="text" id="name" placeholder="your name" required minlength="4" pattern="^[a-zA-Z\s]+$">
+                    </div>
+                    <div class="inputBox">
+                        <span>email :</span>
+                        <input type="email" id="email" placeholder="example@example.com" required>
+                    </div>
+                    <div class="inputBox">
+                        <span>address :</span>
+                        <input type="text" id="address" placeholder="room - street - locality" required pattern="^[a-zA-Z0-9\s,.-]+$">
+                    </div>
+                    <div class="inputBox">
+                        <span>Country :</span>
+                        <input type="text" id="country" placeholder="Morocco" required pattern="^[a-zA-Z\s]+$">
+                    </div>
+                    <div class="flex">
+                        <div class="inputBox">
+                            <span>city :</span>
+                            <input type="text" id="city" placeholder="Tetouan" required pattern="^[a-zA-Z\s]+$">
+                        </div>
+                        <div class="inputBox">
+                            <span>zip code :</span>
+                            <input type="text" id="zip" placeholder="12356" maxlength="5" required pattern="^\d{5}$">
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <h3 class="title">payment</h3>
+                    <div class="inputBox">
+                        <span>cards accepted :</span>
+                        <img src="card_img.png" alt="">
+                    </div>
+                    <div class="inputBox">
+                        <span>name on card :</span>
+                        <input type="text" id="cardName" placeholder="mr/ms.your name" required pattern="^[a-zA-Z\s]+$">
+                    </div>
+                    <div class="inputBox">
+                        <span>credit card number :</span>
+                        <input type="text" id="cardNumber" placeholder="1111-2222-3333-4444" required pattern="^\d{4}-\d{4}-\d{4}-\d{4}$">
+                    </div>
+                    <div class="inputBox">
+                        <span>exp month :</span>
+                        <input type="text" id="expMonth" placeholder="january" required pattern="^(0?[1-9]|1[0-2])$">
+                    </div>
+                    <div class="flex">
+                        <div class="inputBox">
+                            <span>exp year :</span>
+                            <input type="text" id="expYear" placeholder="2022" required pattern="^\d{4}$">
+                        </div>
+                        <div class="inputBox">
+                            <span>CVV :</span>
+                            <input type="password" id="cvv" placeholder="123" required pattern="^\d{3,4}$">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <input type="submit" value="proceed to checkout" class="submit-btn">
+        </form>
+        <div class="validation-message" id="validationMessage">
+            <div class="tick">✔</div>
+            <div class="message">Order Validated Successfully! <br>Check your email</div>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>
